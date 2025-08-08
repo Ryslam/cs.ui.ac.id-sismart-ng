@@ -18,16 +18,19 @@ def main():
     # TODO: Inisialisasi Graph
     for warehouse_id in range (1, V + 1):
         input_line = input().split()
-        N = input_line[0]
+        if input_line[0] == "0":
+            continue
 
-        for info_barang_input in range(1, N):
-            index_id = 
-            index_kuantitas = 
-            index_harga = 
-            print(f"ID: {input_line[info_barang_input]}")
-            print(f"Kuantitas: {input_line[info_barang_input]}")
-            print(f": {input_line[info_barang_input]}")
-
+        i = 1
+        print(f"Berikut barang yang berhasil dinput ke Warehouse ID {warehouse_id}:")
+        while i < len(input_line):
+            print()
+            print(f"ID: {input_line[i]}")
+            print(f"Kuantitas: {input_line[i + 1]}")
+            print(f"Harga: {input_line[i + 2]}")
+            print()
+            i += 3
+    print()
 
 if __name__ == "__main__":
     main()
